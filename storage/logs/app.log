@@ -1,0 +1,10 @@
+2023/07/26 21:57:24 {"callers":["/home/asong/go/src/douyin/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1690379844475596337}
+2023/07/28 12:59:14 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1146: Table 'douyin.user' doesn't exist","time":1690520354916727567}
+2023/07/28 13:05:13 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054: Unknown column 'follower_counts' in 'field list'","time":1690520713736569653}
+2023/07/28 13:10:57 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054: Unknown column 'follower_count' in 'field list'","time":1690521057522846024}
+2023/07/28 13:19:48 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054: Unknown column 'follower_count' in 'field list'","time":1690521588372894228}
+2023/07/28 13:22:27 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054: Unknown column 'follower_count' in 'field list'","time":1690521747613806761}
+2023/07/28 13:43:58 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'follower_count' in 'field list'","time":1690523038194547406}
+2023/07/28 17:12:12 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'id' in 'where clause'","time":1690535532327857915}
+2023/07/28 17:13:26 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'id' in 'where clause'","time":1690535606337797444}
+2023/07/28 17:14:59 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: record not found","time":1690535699302739211}

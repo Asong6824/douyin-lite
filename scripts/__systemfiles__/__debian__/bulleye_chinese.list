@@ -1,0 +1,78 @@
+# 中国科学技术大学
+deb http://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free 
+
+deb http://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free 
+
+deb http://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free 
+
+deb http://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free
+
+# 清华大学
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free 
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free 
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free 
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free 
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free 
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free 
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free 
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+
+# 华为
+deb http://mirrors.huaweicloud.com/debian/ bullseye main non-free contrib
+deb-src http://mirrors.huaweicloud.com/debian/ bullseye main non-free contrib
+
+deb http://mirrors.huaweicloud.com/debian-security/ bullseye-security main
+deb-src http://mirrors.huaweicloud.com/debian-security/ bullseye-security main
+
+deb http://mirrors.huaweicloud.com/debian/ bullseye-updates main non-free contrib
+deb-src http://mirrors.huaweicloud.com/debian/ bullseye-updates main non-free contrib
+
+deb http://mirrors.huaweicloud.com/debian/ bullseye-backports main non-free contrib
+deb-src http://mirrors.huaweicloud.com/debian/ bullseye-backports main non-free contrib
+
+# 网易
+deb http://mirrors.163.com/debian/ bullseye main non-free contrib
+deb-src http://mirrors.163.com/debian/ bullseye main non-free contrib
+
+deb http://mirrors.163.com/debian-security/ bullseye-security main
+deb-src http://mirrors.163.com/debian-security/ bullseye-security main
+
+deb http://mirrors.163.com/debian/ bullseye-updates main non-free contrib
+deb-src http://mirrors.163.com/debian/ bullseye-updates main non-free contrib
+
+deb http://mirrors.163.com/debian/ bullseye-backports main non-free contrib
+deb-src http://mirrors.163.com/debian/ bullseye-backports main non-free contrib
+
+# 阿里
+deb http://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+
+deb http://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb-src http://mirrors.aliyun.com/debian-security/ bullseye-security main
+
+deb http://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+
+deb http://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+
+# 腾讯
+deb http://mirrors.tencent.com/debian/ bullseye main non-free contrib
+deb-src http://mirrors.tencent.com/debian/ bullseye main non-free contrib
+
+deb http://mirrors.tencent.com/debian-security/ bullseye-security main
+deb-src http://mirrors.tencent.com/debian-security/ bullseye-security main
+
+deb http://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+deb-src http://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+
+deb http://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+deb-src http://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+
