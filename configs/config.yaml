@@ -18,11 +18,11 @@ App:
     - .png
   UploadVideoMaxSize: 50  # MB
   UploadVideoAllowExts:
-    - .mp3
+    - .mp4
 Database:
   DBType: mysql
-  Username: asong
-  Password: mysql201209
+  Username: root
+  Password: 123456
   Host: 127.0.0.1
   DBName: douyin
   Charset: utf8
