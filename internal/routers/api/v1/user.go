@@ -27,14 +27,23 @@ func (u User) Login(c *gin.Context) {
 	svc := service.New(c.Request.Context())
 	userid, err := svc.Login(service.UserLoginReq{UserName: param.UserName, Password: param.Password})
 	if err != nil {
-		errMsg :="svc.Register err: %v"
+		errMsg :="svc.Login err: %v"
 		global.Logger.Errorf(context.Background(), errMsg, err)
 		response.ToErrorResponse(errcode.ErrorUserLoginFail)
 		return
 	}
+
+	token, err := svc.GenerateToken(userid)
+	if err != nil {
+		errMsg :="svc.GenerateToken err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.UnauthorizedTokenGenerate)
+		return
+	}
+
 	data := service.UserLoginResp{
 		UserID: userid,
-		Token: "log-token",
+		Token: token,
 	}
 	response.ToResponse(data)
 }
@@ -51,17 +60,31 @@ func (u User) Register(c *gin.Context) {
 	}
 	svc := service.New(c.Request.Context())
 	//pager := app.Pager{Page: app.GetPage(c), PageSize: app.GetPageSize(c)}
-	userid, err := svc.Register(service.UserRegisterReq{UserName: param.UserName, Password: param.Password})
+	_, err := svc.Register(service.UserRegisterReq{UserName: param.UserName, Password: param.Password})
 	if err != nil {
 		errMsg :="svc.Register err: %v"
 		global.Logger.Errorf(context.Background(), errMsg, err)
 		response.ToErrorResponse(errcode.ErrorUserRegisterFail)
 		return
 	}
-
+	userid, err := svc.Login(service.UserLoginReq{UserName: param.UserName, Password: param.Password})
+	if err != nil {
+		errMsg :="svc.Register err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.ErrorUserLoginFail)
+		return
+	}
+	//获取token
+	token, err := svc.GenerateToken(userid)
+	if err != nil {
+		errMsg :="svc.GenerateToken err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.UnauthorizedTokenGenerate)
+		return
+	}
 	data := service.UserRegisterResp{
 		UserID: userid,
-		Token: "dafaqa",//token
+		Token: token,
 	}
 	response.ToResponse(data)
 

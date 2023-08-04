@@ -5,6 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"douyin/internal/middleware"
+	"net/http"
+	"douyin/global"
 )
 
 func NewRouter() *gin.Engine {
@@ -12,6 +14,7 @@ func NewRouter() *gin.Engine {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 	r.Use(middleware.Translations())
+	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 	user := v1.NewUser()
 	video := v1.NewVideo()
 	vl := v1.NewVideoLike()
