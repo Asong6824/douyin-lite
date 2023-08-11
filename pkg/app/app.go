@@ -2,7 +2,6 @@ package app
 
 import (
 	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"douyin/pkg/errcode"
 )
@@ -26,11 +25,18 @@ func NewResponse(ctx *gin.Context) *Response {
 	}
 }
 
-func (r *Response) ToResponse(data interface{}) {
-	if data == nil {
-		data = gin.H{}
+func (r *Response) ToResponse(data map[string]interface{}) {
+	responseData := gin.H{
+		"status_code": 0,
+		"status_msg":  "success",
 	}
-	r.Ctx.JSON(http.StatusOK, data)
+	if data != nil {
+		for s, v := range data {
+			responseData[s] = v
+		}
+	}
+
+	r.Ctx.JSON(http.StatusOK, responseData)
 }
 
 func (r *Response) ToResponseList(list interface{}, totalRows int) {
@@ -44,12 +50,14 @@ func (r *Response) ToResponseList(list interface{}, totalRows int) {
 	})
 }
 
-func (r *Response) ToErrorResponse(err *errcode.Error) {
-	response := gin.H{"code": err.Code(), "msg": err.Msg()}
-	details := err.Details()
-	if len(details) > 0 {
-		response["details"] = details
+func (r *Response) ToErrorResponse(err *errcode.Error, data map[string]interface{}) {
+	responseData := gin.H{
+		"status_code": err.Code(), 
+		"status_msg": err.Msg(),
 	}
+	for s, v := range data {
+		responseData[s] = v
+	}
+	r.Ctx.JSON(http.StatusOK, responseData)
 
-	r.Ctx.JSON(err.StatusCode(), response)
 }

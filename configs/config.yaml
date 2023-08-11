@@ -19,7 +19,7 @@ App:
   UploadVideoMaxSize: 50  # MB
   UploadVideoAllowExts:
     - .mp4
-Database:
+Mysql:
   DBType: mysql
   Username: root
   Password: 123456
@@ -29,6 +29,21 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+
+Redis:
+  Host: 127.0.0.1:6379
+  Password: ""
+  DB: 0
+  MaxIdleConns: 10
+  MaxActiveConns: 100
+  IdleTimeout: 180
 JWT:
   Secret: douyin
   
+
+
+
+
+
+
+

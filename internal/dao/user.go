@@ -26,3 +26,26 @@ func (d *Dao) GetUser(userid uint32) (*model.User, error) {
 	}
 	return user.GetUser(d.engine)
 }
+
+//ActionType 0 minus, 1 plus
+func (d *Dao) ModifyFollowingCount(userid uint32, ActionType int) error {
+	user := model.User{
+		UserID: userid,
+	}
+	if ActionType == 1 {
+		return user.PlusFollowingCount(d.engine)
+	} else {
+		return user.MinusFollowingCount(d.engine)
+	}
+}
+
+func (d *Dao) ModifyFollowersCount(userid uint32, ActionType int) error {
+	user := model.User{
+		UserID: userid,
+	}
+	if ActionType == 1 {
+		return user.PlusFollowersCount(d.engine)
+	} else {
+		return user.MinusFollowersCount(d.engine)
+	}
+}

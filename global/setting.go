@@ -8,7 +8,8 @@ import (
 var (
 	ServerSetting   *setting.ServerSettingS
 	AppSetting      *setting.AppSettingS
-	DatabaseSetting *setting.DatabaseSettingS
+	MysqlSetting    *setting.MysqlSettingS
+	RedisSetting    *setting.RedisSettingS
 	Logger          *logger.Logger
-	JWTSetting    *setting.JWTSettingS
+	JWTSetting      *setting.JWTSettingS
 )

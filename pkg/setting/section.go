@@ -26,7 +26,7 @@ type AppSettingS struct {
 	UploadVideoAllowExts []string
 }
 
-type DatabaseSettingS struct {
+type MysqlSettingS struct {
 	DBType       string
 	UserName     string
 	Password     string
@@ -36,6 +36,16 @@ type DatabaseSettingS struct {
 	ParseTime    bool
 	MaxIdleConns int
 	MaxOpenConns int
+}
+
+type RedisSettingS struct {
+	Host          string
+  	Port          string
+  	Password      string
+  	DB            int
+  	MaxIdleConns  int
+  	axActiveConns int
+  	IdleTimeout   time.Duration
 }
 
 type JWTSettingS struct {

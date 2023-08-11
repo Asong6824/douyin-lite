@@ -8,3 +8,76 @@
 2023/07/28 17:12:12 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'id' in 'where clause'","time":1690535532327857915}
 2023/07/28 17:13:26 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'id' in 'where clause'","time":1690535606337797444}
 2023/07/28 17:14:59 {"callers":["/home/douyin/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: record not found","time":1690535699302739211}
+2023/08/05 08:41:13 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.Login err: record not found","time":1691224873830629020}
+2023/08/09 12:30:37 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691584237435949808}
+2023/08/09 12:32:53 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691584373587453368}
+2023/08/09 12:33:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691584411931133918}
+2023/08/09 12:33:55 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Error 1146 (42S02): Table 'douyin.follow_relation' doesn't exist","time":1691584435036960295}
+2023/08/09 13:39:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691588366531576842}
+2023/08/09 13:39:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691588366545864254}
+2023/08/09 13:39:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691588366546712084}
+2023/08/09 13:39:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"get refreshToken from redis err","time":1691588366548910161}
+2023/08/09 13:39:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"token不合法，请确认你是否登录","time":1691588366549736971}
+2023/08/09 13:39:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691588384227885758}
+2023/08/09 13:39:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691588384228996364}
+2023/08/09 13:39:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691588384229951031}
+2023/08/09 13:39:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"get refreshToken from redis err","time":1691588384231891594}
+2023/08/09 13:39:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"token不合法，请确认你是否登录","time":1691588384232878051}
+2023/08/09 13:39:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691588385786408270}
+2023/08/09 13:39:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691588385787737135}
+2023/08/09 13:39:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691588385788380398}
+2023/08/09 13:39:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"get refreshToken from redis err","time":1691588385789825600}
+2023/08/09 13:39:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"token不合法，请确认你是否登录","time":1691588385790492879}
+2023/08/09 13:39:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691588388947905679}
+2023/08/09 13:39:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691588388949056461}
+2023/08/09 13:39:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691588388949759702}
+2023/08/09 13:39:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"get refreshToken from redis err","time":1691588388951720821}
+2023/08/09 13:39:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"token不合法，请确认你是否登录","time":1691588388952730205}
+2023/08/10 01:05:01 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691629501002941156}
+2023/08/10 01:06:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691629566305150974}
+2023/08/10 01:06:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: Error 1054 (42S22): Unknown column 'users.' in 'where clause'","time":1691629566305822718}
+2023/08/10 01:14:46 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"confirm isfollow error","time":1691630086495462365}
+2023/08/10 01:14:46 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.GetUser err: Error 1146 (42S02): Table 'douyin.follow_relation' doesn't exist","time":1691630086506299313}
+2023/08/10 01:16:11 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691630171077275230}
+2023/08/10 01:16:11 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691630171084033314}
+2023/08/10 01:16:11 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691630171084557955}
+2023/08/10 01:16:11 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691630171085562414}
+2023/08/10 07:10:59 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691651459390579828}
+2023/08/10 07:43:12 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691653392582920210}
+2023/08/11 01:52:54 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691718774685134912}
+2023/08/11 02:17:37 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Already following","time":1691720257647739895}
+2023/08/11 02:17:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720265871178121}
+2023/08/11 02:17:45 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720265871782093}
+2023/08/11 02:18:08 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691720288665701088}
+2023/08/11 02:18:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720319288442095}
+2023/08/11 02:18:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720319288989067}
+2023/08/11 02:18:42 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720322424826604}
+2023/08/11 02:18:42 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720322425630679}
+2023/08/11 02:22:58 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720578703247520}
+2023/08/11 02:22:58 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720578704173071}
+2023/08/11 02:25:36 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720736373799802}
+2023/08/11 02:25:36 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720736379534825}
+2023/08/11 02:29:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691720988692276833}
+2023/08/11 02:29:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691720988696711953}
+2023/08/11 03:01:08 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691722868583045752}
+2023/08/11 03:01:08 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691722868587370852}
+2023/08/11 03:26:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"get user info error","time":1691724391756260134}
+2023/08/11 03:26:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowList err: record not found","time":1691724391756874607}
+2023/08/11 03:39:34 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691725174544933462}
+2023/08/11 06:46:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691736412729925022}
+2023/08/11 06:46:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691736412738890530}
+2023/08/11 06:46:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691736412739283856}
+2023/08/11 06:46:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691736412740868222}
+2023/08/11 06:52:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691736734062770072}
+2023/08/11 06:52:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691736734083459640}
+2023/08/11 06:52:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691736734084320531}
+2023/08/11 06:52:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691736734086239938}
+2023/08/11 06:55:38 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691736938199258515}
+2023/08/11 06:55:38 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691736938206999558}
+2023/08/11 06:55:38 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691736938207814499}
+2023/08/11 06:55:38 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691736938209353826}
+2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691737179659811452}
+2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691737179675655186}
+2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691737179676351110}
+2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691737179678610534}
+2023/08/11 07:04:56 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691737496632457638}

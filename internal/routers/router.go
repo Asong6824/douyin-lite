@@ -14,6 +14,7 @@ func NewRouter() *gin.Engine {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 	r.Use(middleware.Translations())
+	r.Use(middleware.Auth())
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 	user := v1.NewUser()
 	video := v1.NewVideo()
@@ -34,8 +35,8 @@ func NewRouter() *gin.Engine {
 		apiv1.POST("/comment/action/", vc.CommentAction)
 		apiv1.GET("/comment/list/", vc.CommentList)
 
-		apiv1.POST("/relation/action/", fr.RelationAction)
-		apiv1.GET("/relation/follow/list/", fr.RelationList)
+		apiv1.POST("/relation/action/", fr.FollowAction)
+		apiv1.GET("/relation/follow/list/", fr.FollowList)
 	}
 	return r
 }

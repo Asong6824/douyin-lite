@@ -1,11 +1,20 @@
 package service
 
+import (
+	"douyin/pkg/util"
+)
+
 type PublishActionReq struct {
-	UserID uint32 `form:"user" binding:"required,min=1,max=32"`
-	Title string `form:"password" binding:"required,min=6,max=32"`
+	Token string
+	Title string 
 	FilePath string 
 }
 
 func (svc *Service) PublishAction(param PublishActionReq) error {
-	return svc.dao.PublishAction(param.UserID, param.Title, param.FilePath)
+	
+	UserID, err := util.GetUserIDFormToken(param.Token)
+	if err != nil {
+		return err
+	}
+	return svc.dao.PublishAction(UserID, param.Title, param.FilePath)
 }

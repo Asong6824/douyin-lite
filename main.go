@@ -19,13 +19,17 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupSetting err: %v", err)
 	}
-	err = setupDBEngine()
+	err = setupMysql()
 	if err != nil {
-		log.Fatalf("init.setupDBEngine err: %v", err)
+		log.Fatalf("init.setupMysql err: %v", err)
 	}
 	err = setupLogger()
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v", err)
+	}
+	err = setupRedis()
+	if err != nil {
+		log.Fatalf("init.setupRedis err: %v", err)
 	}
 }
 
@@ -39,7 +43,6 @@ func main() {
 		WriteTimeout:   global.ServerSetting.WriteTimeout,
 		MaxHeaderBytes: 1 << 20,
 	}
-	//global.Logger.Infof(,"%s: go-programming-tour-book/%s", "eddycjy", "blog-service")
 	s.ListenAndServe()
 }
 
@@ -56,7 +59,11 @@ func setupSetting() error {
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("Database", &global.DatabaseSetting)
+	err = setting.ReadSection("Mysql", &global.MysqlSetting)
+	if err != nil {
+		return err
+	}
+	err = setting.ReadSection("Redis", &global.RedisSetting)
 	if err != nil {
 		return err
 	}
@@ -81,9 +88,19 @@ func setupLogger() error {
 	return nil
 }
 
-func setupDBEngine() error {
+func setupMysql() error {
 	var err error
-	global.DBEngine, err = model.NewDBEngine(global.DatabaseSetting)
+	global.DBEngine, err = model.NewMysqlConn(global.MysqlSetting)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func setupRedis() error {
+	var err error
+	global.Redis, err = model.NewRedisConn(global.RedisSetting)
 	if err != nil {
 		return err
 	}

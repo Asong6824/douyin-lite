@@ -22,13 +22,13 @@ func (v Video) PublishAction(c *gin.Context) {
     response := app.NewResponse(c)
 	file, fileHeader, err := c.Request.FormFile("data")
 	if err != nil {
-		response.ToErrorResponse(errcode.InvalidParams.WithDetails(err.Error()))
+		response.ToErrorResponse(errcode.InvalidParams, nil)
 		return
 	}
 
 	fileType := upload.TypeVideo
 	if fileHeader == nil || fileType <= 0 {
-		response.ToErrorResponse(errcode.InvalidParams)
+		response.ToErrorResponse(errcode.InvalidParams, nil)
 		return
 	}
 
@@ -36,12 +36,11 @@ func (v Video) PublishAction(c *gin.Context) {
 	fileInfo, err := svc.UploadFile(upload.FileType(fileType), file, fileHeader)
 	if err != nil {
 		global.Logger.Errorf(c, "svc.UploadFile err: %v", err)
-		response.ToErrorResponse(errcode.ErrorPublishActionFail.WithDetails(err.Error()))
+		response.ToErrorResponse(errcode.ErrorPublishActionFail, nil)
 		return
 	}
-
     err = svc.PublishAction(service.PublishActionReq{
-        UserID: 1, 
+        Token: convert.StrTo(c.PostForm("token")).String(), 
         Title: convert.StrTo(c.PostForm("title")).String(),
         FilePath: fileInfo.AccessUrl,
     })
@@ -49,12 +48,10 @@ func (v Video) PublishAction(c *gin.Context) {
     if err != nil {
 		errMsg :="svc.PublishAction err: %v"
 		global.Logger.Errorf(context.Background(), errMsg, err)
-		response.ToErrorResponse(errcode.ErrorPublishActionFail)
+		response.ToErrorResponse(errcode.ErrorPublishActionFail, nil)
 		return
 	}
 
-	response.ToResponse(gin.H{
-		"file_access_url": fileInfo.AccessUrl,
-	})
+	response.ToResponse(nil)
 }
 func (v Video) Feed(c *gin.Context) {}
