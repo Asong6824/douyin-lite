@@ -81,3 +81,17 @@
 2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691737179676351110}
 2023/08/11 06:59:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691737179678610534}
 2023/08/11 07:04:56 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691737496632457638}
+2023/08/12 00:39:20 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691800760937004176}
+2023/08/12 14:31:03 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691850663662266183}
+2023/08/14 00:29:18 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691972958765377635}
+2023/08/14 06:50:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1691995826841982786}
+2023/08/14 06:50:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1691995826857893377}
+2023/08/14 06:50:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1691995826859381235}
+2023/08/14 06:50:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691995826863422694}
+2023/08/14 06:51:09 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691995869261710769}
+2023/08/14 06:51:18 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691995878393263437}
+2023/08/14 06:52:21 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1691995941228197725}
+2023/08/14 06:54:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1691996066424222012}
+2023/08/14 06:54:53 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691996093434178409}
+2023/08/14 06:55:07 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1691996107431328111}
+2023/08/14 07:41:55 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: VideoID为必填字段","time":1691998915250127316}

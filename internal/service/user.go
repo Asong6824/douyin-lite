@@ -33,11 +33,11 @@ type GetUserReq struct {
 }
 
 type GetUserResp struct {
-	UserID         uint32
-	UserName       string
-	FollowingCount uint32
-	FollowersCount uint32
-	IsFollow       bool
+    UserID         uint32 `json:"id"`
+    UserName       string `json:"name"`
+    FollowingCount uint32 `json:"follow_count"`
+    FollowersCount uint32 `json:"follower_count"`
+    IsFollow       bool   `json:"is_follow"`
 }
 
 func (svc *Service) Register(param UserRegisterReq) (interface{}, error) {

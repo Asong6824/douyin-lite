@@ -17,7 +17,32 @@ func NewVideo() Video {
     return Video{}
 }
 
-func (v Video) PublishList(c *gin.Context) {}
+func (v Video) PublishList(c *gin.Context) {
+	param := service.PublishListReq{}
+	response := app.NewResponse(c)
+	responseData := map[string]interface{}{
+		"video_list": "",
+	}
+    valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		errMsg := "app.BindAndValid errs: %v"
+		global.Logger.Errorf(context.Background(), errMsg, errs)
+		response.ToErrorResponse(errcode.InvalidParams, nil)
+		return
+	}
+	svc := service.New(c.Request.Context())
+	rawVideoList, err := svc.PublishList(param)
+    if err != nil {
+		errMsg :="svc.PublishList err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.ErrorPublishListFail, nil)
+		return
+	}
+	videoList := rawVideoList.(service.PublishListResp)
+	responseData["video_list"] = videoList.PublishList
+	response.ToResponse(responseData)
+}
+
 func (v Video) PublishAction(c *gin.Context) {
     response := app.NewResponse(c)
 	file, fileHeader, err := c.Request.FormFile("data")

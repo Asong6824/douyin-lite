@@ -50,13 +50,14 @@ func (fr FollowRelation) FollowList(c *gin.Context) {
 		return
 	}
 	svc := service.New(c.Request.Context())
-	UserList, err := svc.FollowList(param)
+	rawUserList, err := svc.FollowList(param)
     if err != nil {
 		errMsg :="svc.FollowList err: %v"
 		global.Logger.Errorf(context.Background(), errMsg, err)
 		response.ToErrorResponse(errcode.ErrorFollowListFail, nil)
 		return
 	}
-	responseData["user_list"] = UserList
+	userList := rawUserList.(service.FollowListResp)
+	responseData["user_list"] = userList.UserList
 	response.ToResponse(responseData)
 }
