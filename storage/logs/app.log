@@ -104,3 +104,5 @@
 2023/08/15 04:09:09 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692072549156767790}
 2023/08/15 04:36:58 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692074218213184004}
 2023/08/15 04:40:07 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692074407372558883}
+2023/08/15 04:54:24 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692075264557957474}
+2023/08/15 05:12:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FavoriteAction err: Already Favoriting","time":1692076346824032215}

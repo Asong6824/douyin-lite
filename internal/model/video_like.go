@@ -11,22 +11,17 @@ type VideoLike struct {
 }
 
 func (vl VideoLike) Favorite(db *gorm.DB) error {
-    if ok, _ := vl.IsFavorite(db); ok {
-        result := db.Table("video_likes").Create(&vl)
-        if result.Error != nil {
-            return result.Error
-        }
+    result := db.Table("video_likes").Create(&vl)
+    if result.Error != nil {
+        return result.Error
     }
     return nil
 }
 
 func (vl VideoLike) Unfavorite(db *gorm.DB) error {
-    if ok, _ := vl.IsFavorite(db); !ok {
-        result := db.Table("video_likes").Delete(&vl)
-    
-        if result.Error != nil {
-            return result.Error
-        }
+    result := db.Table("video_likes").Delete(&vl)
+    if result.Error != nil {
+        return result.Error
     }
     return nil
 }
