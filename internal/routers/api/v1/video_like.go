@@ -36,4 +36,29 @@ func (vl VideoLike) FavoriteAction(c *gin.Context) {
 	response.ToResponse(nil)
 }
 
-func (vl VideoLike) FavoriteList(c *gin.Context) {}
+func (vl VideoLike) FavoriteList(c *gin.Context) {
+	param := service.FavoriteListReq{}
+	response := app.NewResponse(c)
+	responseData := map[string]interface{}{
+		"video_list": "",
+	}
+    valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		errMsg := "app.BindAndValid errs: %v"
+		global.Logger.Errorf(context.Background(), errMsg, errs)
+		response.ToErrorResponse(errcode.InvalidParams, nil)
+		return
+	}
+	svc := service.New(c.Request.Context())
+    rawVideoList, err := svc.FavoriteList(param)
+    if err != nil {
+		errMsg :="svc.PublishList err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.ErrorPublishListFail, nil)
+		return
+	}
+	videoList := rawVideoList.(service.PublishListResp)
+	responseData["video_list"] = videoList.PublishList
+	response.ToResponse(responseData)
+}
+

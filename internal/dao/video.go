@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+
 func (d *Dao) PublishAction(userid uint32, title string, filepath string) error {
 	video := model.Video{
 		UserID: userid,
@@ -28,4 +29,27 @@ func (d *Dao) GetVideoList(userid uint32) ([]uint32, error) {
 		UserID: userid,
 	}
 	return video.GetVideoList(d.engine)
+}
+
+//ActionType 0 minus, 1 plus
+func (d *Dao) ModifyVideoFavoriteCount(videoid uint32, ActionType int) error {
+	video := model.Video{
+		VideoID: videoid,
+	}
+	if ActionType == 1 {
+		return video.PlusFavoriteCount(d.engine)
+	} else {
+		return video.MinusFavoriteCount(d.engine)
+	}
+}
+
+func (d *Dao) ModifyCommentCount(videoid uint32, ActionType int) error {
+	video := model.Video{
+		VideoID: videoid,
+	}
+	if ActionType == 1 {
+		return video.PlusCommentCount(d.engine)
+	} else {
+		return video.MinusCommentCount(d.engine)
+	}
 }

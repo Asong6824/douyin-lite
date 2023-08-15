@@ -11,22 +11,17 @@ type FollowRelation struct {
 }
 
 func (fr FollowRelation) Follow(db *gorm.DB) error {
-    if ok, _ := fr.IsFollow(db); ok {
-        result := db.Table("follow_relations").Create(&fr)
-        if result.Error != nil {
-            return result.Error
-        }
+    result := db.Table("follow_relations").Create(&fr)
+    if result.Error != nil {
+        return result.Error
     }
     return nil
 }
 
 func (fr FollowRelation) Unfollow(db *gorm.DB) error {
-    if ok, _ := fr.IsFollow(db); !ok {
-        result := db.Table("follow_relations").Delete(&fr)
-    
-        if result.Error != nil {
-            return result.Error
-        }
+    result := db.Table("follow_relations").Delete(&fr)
+    if result.Error != nil {
+        return result.Error
     }
     return nil
 }

@@ -57,3 +57,35 @@ func (v Video) GetVideoList(db *gorm.DB) ([]uint32, error) {
     
     return videoList, nil
 }
+
+func (v Video) PlusFavoriteCount(db *gorm.DB) error {
+	err := db.Table("videos").Where("video_id = ?", v.VideoID).Model(&v).UpdateColumn("favorite_count", gorm.Expr("favorite_count + ?", 1)).Error 
+	if err != nil { 
+		return err 
+	} 
+	return nil
+}
+
+func (v Video) MinusFavoriteCount(db *gorm.DB) error {
+	err := db.Table("videos").Where("video_id = ?", v.VideoID).Model(&v).UpdateColumn("favorite_count", gorm.Expr("favorite_count - ?", 1)).Error 
+	if err != nil { 
+		return err 
+	} 
+	return nil
+}
+
+func (v Video) PlusCommentCount(db *gorm.DB) error {
+	err := db.Table("videos").Where("video_id = ?", v.VideoID).Model(&v).UpdateColumn("comment_count", gorm.Expr("comment_count + ?", 1)).Error 
+	if err != nil { 
+		return err 
+	} 
+	return nil
+}
+
+func (v Video) MinusCommentCount(db *gorm.DB) error {
+	err := db.Table("videos").Where("video_id = ?", v.VideoID).Model(&v).UpdateColumn("comment_count", gorm.Expr("comment_count - ?", 1)).Error 
+	if err != nil { 
+		return err 
+	} 
+	return nil
+}

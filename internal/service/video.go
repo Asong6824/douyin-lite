@@ -51,7 +51,7 @@ func (svc *Service) PublishList(param PublishListReq) (interface{}, error) {
 	if len(videoIdList) == 0 {
 		return nil, nil
 	}
-	//根据videoId逐一获取视频信息
+	//根据videoId逐一获取视频信息 获取视频信息可以再封装
     count := 0
 	videoList := make([]VideoInfo, 0)
     for _, videoId := range videoIdList {

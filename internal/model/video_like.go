@@ -43,3 +43,20 @@ func (vl VideoLike) IsFavorite(db *gorm.DB) (bool, error) {
     
     return count>0, nil
 }
+
+func (vl VideoLike) FavoriteList(db *gorm.DB) ([]uint32, error) {
+    var favoriteList []uint32
+    result := db.Table("video_likes").
+        Select("video_id").
+        Where("user_id = ?", vl.UserID).
+        Pluck("video_id", &favoriteList)
+    if result.RecordNotFound() {
+    // 查询结果为空，可以根据需求进行相应的处理
+        return nil, nil
+    }
+    if result.Error != nil {
+        return nil, result.Error
+    }
+    
+    return favoriteList, nil
+}

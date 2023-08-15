@@ -95,3 +95,12 @@
 2023/08/14 06:54:53 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1691996093434178409}
 2023/08/14 06:55:07 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1691996107431328111}
 2023/08/14 07:41:55 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: VideoID为必填字段","time":1691998915250127316}
+2023/08/15 03:57:50 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692071870398333392}
+2023/08/15 03:58:05 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692071885450012812}
+2023/08/15 03:58:19 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692071899852251128}
+2023/08/15 03:58:27 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692071907489161766}
+2023/08/15 03:59:41 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692071981946652485}
+2023/08/15 04:00:20 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692072020057679391}
+2023/08/15 04:09:09 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692072549156767790}
+2023/08/15 04:36:58 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692074218213184004}
+2023/08/15 04:40:07 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692074407372558883}
