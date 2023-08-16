@@ -32,7 +32,7 @@ func NewRouter() *gin.Engine {
 
 		apiv1.POST("/favorite/action/", vl.FavoriteAction) //video_likes create
 		apiv1.GET("/favorite/list/", vl.FavoriteList)
-		apiv1.POST("/comment/action/", vc.CommentAction)
+		apiv1.POST("/comment/action/", vc.Comment)
 		apiv1.GET("/comment/list/", vc.CommentList)
 
 		apiv1.POST("/relation/action/", fr.FollowAction)

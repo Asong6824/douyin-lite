@@ -10,4 +10,6 @@ var (
 	ErrorFollowListFail     = NewError(20030002, "获取关注列表失败")
 	ErrorFavoriteActionFail = NewError(20040001, "视频点赞失败")
 	ErrorFavoriteListFail   = NewError(20040002, "获取点赞视频列表失败")
+	ErrorCommentActionFail = NewError(20050001, "评论操作失败")
+	ErrorCommentListFail   = NewError(20050002, "获取视频评论列表失败")
 )

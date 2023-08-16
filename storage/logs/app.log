@@ -106,3 +106,21 @@
 2023/08/15 04:40:07 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FollowAction err: Not following","time":1692074407372558883}
 2023/08/15 04:54:24 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692075264557957474}
 2023/08/15 05:12:26 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FavoriteAction err: Already Favoriting","time":1692076346824032215}
+2023/08/15 06:11:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692079866601212304}
+2023/08/15 06:28:53 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692080933924214638}
+2023/08/15 06:37:42 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692081462945228917}
+2023/08/16 01:01:05 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692147665485318014}
+2023/08/16 01:01:41 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: Error 1054 (42S22): Unknown column 'comment_id' in 'field list'","time":1692147701171525304}
+2023/08/16 01:05:39 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: unsupported destination, should be slice or struct","time":1692147939113631478}
+2023/08/16 01:07:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: record not found","time":1692148034361280128}
+2023/08/16 01:21:12 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: Error 1054 (42S22): Unknown column 'create_time' in 'where clause'","time":1692148872523696342}
+2023/08/16 01:22:25 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: record not found","time":1692148945508239070}
+2023/08/16 01:26:08 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: record not found","time":1692149168126793586}
+2023/08/16 01:28:22 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692149302308768459}
+2023/08/16 01:31:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: record not found","time":1692149504541935282}
+2023/08/16 01:32:44 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.CommentAction err: record not found","time":1692149564206911880}
+2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"token expire or parse token error","time":1692157549732263364}
+2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"valid token err","time":1692157549740760359}
+2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1692157549741581080}
+2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692157549744558615}
+2023/08/16 03:46:00 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692157560812184366}
