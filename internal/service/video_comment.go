@@ -46,6 +46,10 @@ func (svc *Service) CommentAction(param CommentActionReq) (interface{}, error) {
 	if err != nil {
 		return nil,err
 	}
+	err = svc.dao.ModifyCommentCount(param.VideoID, 1)
+	if err != nil {
+		return nil,err
+	}
 	userInfo, err := svc.GetUser(GetUserReq{Token: param.Token, UserID: userId})
 	if err != nil {
 		return nil,err
@@ -69,6 +73,10 @@ func (svc *Service) CommentDelete(param CommentDeleteReq) error {
 	}
 	if ok == false {
 		return errors.New("No comments yet")
+	}
+	err = svc.dao.ModifyCommentCount(param.VideoID, 1)
+	if err != nil {
+		return err
 	}
 	return svc.dao.CommentDelete(param.CommentID)
 }

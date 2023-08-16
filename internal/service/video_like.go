@@ -43,7 +43,7 @@ func (svc *Service) FavoriteAction(param FavoriteActionReq) error {
 			return err
 		}
 		*/
-		err = svc.dao.ModifyVideoFavoriteCount(UserID, 1) //视频的获赞数+1
+		err = svc.dao.ModifyVideoFavoriteCount(param.VideoID, 1) //视频的获赞数+1
 		if err != nil {
 			return err
 		}
@@ -67,7 +67,7 @@ func (svc *Service) FavoriteAction(param FavoriteActionReq) error {
 			return err
 		}
 		*/
-		err = svc.dao.ModifyVideoFavoriteCount(UserID, 0) //视频的获赞数-1
+		err = svc.dao.ModifyVideoFavoriteCount(param.VideoID, 0) //视频的获赞数-1
 		if err != nil {
 			return err
 		}

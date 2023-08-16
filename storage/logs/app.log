@@ -124,3 +124,6 @@
 2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"info","message":"valid refreshToken","time":1692157549741581080}
 2023/08/16 03:45:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692157549744558615}
 2023/08/16 03:46:00 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692157560812184366}
+2023/08/16 07:13:02 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692169982881749215}
+2023/08/16 08:10:19 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FavoriteAction err: Already Favoriting","time":1692173419838718026}
+2023/08/16 08:24:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692174292823394324}

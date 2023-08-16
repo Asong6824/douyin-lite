@@ -7,11 +7,13 @@ import (
 )
 
 type Video struct {
-    VideoID uint32
-    UserID uint32
-    Title string
-    FilePath string
-    UploadTime time.Time
+    VideoID       uint32
+    UserID        uint32
+    Title         string
+    FilePath      string
+    UploadTime    time.Time
+	FavoriteCount uint32
+	CommentCount  uint32
 }
 
 func (v Video) PublishAction(db *gorm.DB) error {
@@ -46,6 +48,7 @@ func (v Video) GetVideoList(db *gorm.DB) ([]uint32, error) {
     result := db.Table("videos").
         Select("video_id").
         Where("user_id = ?", v.UserID).
+		Limit(8).
         Pluck("video_id", &videoList)
     if result.RecordNotFound() {
     // 查询结果为空，可以根据需求进行相应的处理
@@ -88,4 +91,22 @@ func (v Video) MinusCommentCount(db *gorm.DB) error {
 		return err 
 	} 
 	return nil
+}
+
+func (v Video) GetVideoListByTime(db *gorm.DB) ([]uint32, error) {
+	var videoList []uint32
+    result := db.Table("videos").
+        Select("video_id").
+		Where("upload_time < ?", v.UploadTime).
+        Order("upload_time DESC").
+        Limit(8).
+        Pluck("video_id", &videoList)
+    if result.RecordNotFound() {
+        return nil, nil
+    }
+    if result.Error != nil {
+        return nil, result.Error
+    }
+    
+    return videoList, nil
 }

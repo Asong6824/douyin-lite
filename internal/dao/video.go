@@ -12,6 +12,8 @@ func (d *Dao) PublishAction(userid uint32, title string, filepath string) error 
     	Title: title,
     	FilePath: filepath,
 		UploadTime: time.Now(),
+		FavoriteCount: 0,
+		CommentCount: 0,
 	}
 	return video.PublishAction(d.engine)
 }
@@ -24,6 +26,7 @@ func (d *Dao) GetVideo(videoid uint32) (*model.Video, error) {
 	return video.GetVideo(d.engine)
 }
 
+//获取用户的投稿视频的id列表
 func (d *Dao) GetVideoList(userid uint32) ([]uint32, error) {
 	video := model.Video{
 		UserID: userid,
@@ -52,4 +55,11 @@ func (d *Dao) ModifyCommentCount(videoid uint32, ActionType int) error {
 	} else {
 		return video.MinusCommentCount(d.engine)
 	}
+}
+
+func (d *Dao) GetVideoListByTime(uploadTime time.Time) ([]uint32, error) {
+	video := model.Video{
+		UploadTime: uploadTime,
+	}
+	return video.GetVideoListByTime(d.engine)
 }

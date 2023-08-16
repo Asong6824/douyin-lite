@@ -6,6 +6,7 @@ var (
 	ErrorGetUserFail        = NewError(20010003, "获取用户信息失败")
 	ErrorPublishActionFail  = NewError(20020001, "上传视频失败")
 	ErrorPublishListFail    = NewError(20020002, "获取发布列表失败")
+	ErrorFeedFail           = NewError(20020003, "获取视频流失败")
 	ErrorFollowActionFail   = NewError(20030001, "关注操作失败")
 	ErrorFollowListFail     = NewError(20030002, "获取关注列表失败")
 	ErrorFavoriteActionFail = NewError(20040001, "视频点赞失败")

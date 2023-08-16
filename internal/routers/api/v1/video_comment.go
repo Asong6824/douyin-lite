@@ -67,6 +67,7 @@ func (vc VideoComment) Comment(c *gin.Context) {
 		return
     }
 }
+
 func (vc VideoComment) CommentList(c *gin.Context) {
     param := service.CommentListReq{}
 	response := app.NewResponse(c)

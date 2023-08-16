@@ -79,4 +79,31 @@ func (v Video) PublishAction(c *gin.Context) {
 
 	response.ToResponse(nil)
 }
-func (v Video) Feed(c *gin.Context) {}
+
+func (v Video) Feed(c *gin.Context) {
+	param := service.FeedReq{}
+	response := app.NewResponse(c)
+	responseData := map[string]interface{}{
+		"video_list": "",
+		"next_time" : "",
+	}
+    valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		errMsg := "app.BindAndValid errs: %v"
+		global.Logger.Errorf(context.Background(), errMsg, errs)
+		response.ToErrorResponse(errcode.InvalidParams, nil)
+		return
+	}
+	svc := service.New(c.Request.Context())
+	rawVideoList, err := svc.Feed(param)
+    if err != nil {
+		errMsg :="svc.PublishList err: %v"
+		global.Logger.Errorf(context.Background(), errMsg, err)
+		response.ToErrorResponse(errcode.ErrorFeedFail, nil)
+		return
+	}
+	feedResp := rawVideoList.(service.FeedResp)
+	responseData["video_list"] = feedResp.VideoList
+	responseData["next_time"]  = feedResp.NextTime.Format("01-02")
+	response.ToResponse(responseData)
+}
