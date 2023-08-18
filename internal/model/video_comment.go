@@ -19,12 +19,12 @@ func (vc VideoComment) CommentAction(db *gorm.DB) (uint32, error) {
         return 0, result.Error
     }
     // 执行查询获取最后插入的自增主键值
-    var comment VideoComment
+    var id []uint32
 	result = db.Table("video_comments").
 		Where("user_id = ? AND video_id = ?", vc.UserID, vc.VideoID).
         Model(&vc).
-		First(&comment)
-
+		Select("max(id)").
+        Scan(&id)
     if result.Error != nil {
         if errors.Is(result.Error, gorm.ErrRecordNotFound) {
            return 0, result.Error
@@ -32,7 +32,7 @@ func (vc VideoComment) CommentAction(db *gorm.DB) (uint32, error) {
         return 0, result.Error
     }
     
-    return comment.ID, nil
+    return id[0], nil
 }
 
 func (vc VideoComment) CommentDelete(db *gorm.DB) error {

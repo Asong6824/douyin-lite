@@ -127,3 +127,46 @@
 2023/08/16 07:13:02 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692169982881749215}
 2023/08/16 08:10:19 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.FavoriteAction err: Already Favoriting","time":1692173419838718026}
 2023/08/16 08:24:52 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692174292823394324}
+2023/08/16 08:47:18 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段","time":1692175638447732041}
+2023/08/16 08:47:36 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692175656560702126}
+2023/08/16 08:57:02 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176222551332344}
+2023/08/16 08:58:18 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176298598078781}
+2023/08/16 08:58:53 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176333647925208}
+2023/08/16 08:59:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176388072157194}
+2023/08/16 09:01:27 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176487717750074}
+2023/08/16 09:01:30 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176490568933099}
+2023/08/16 09:01:49 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176509795341205}
+2023/08/16 09:02:29 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176549577802182}
+2023/08/16 09:03:59 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176639996754994}
+2023/08/16 09:04:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176654245580956}
+2023/08/16 09:04:48 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692176688706646458}
+2023/08/16 09:04:57 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692176697527246365}
+2023/08/16 09:15:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.dao.Login error","time":1692177314760337333}
+2023/08/16 09:15:14 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: unsupported destination, should be slice or struct","time":1692177314763083886}
+2023/08/16 09:16:13 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.dao.Login error","time":1692177373657171067}
+2023/08/16 09:16:13 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: unsupported destination, should be slice or struct","time":1692177373657942355}
+2023/08/18 02:18:22 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.dao.Login error","time":1692325102735509827}
+2023/08/18 02:18:22 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.Register err: unsupported destination, should be slice or struct","time":1692325102745108052}
+2023/08/18 02:22:38 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"debug","message":"redis set success","time":1692325358066917307}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserName为必填字段,Password为必填字段","time":1692326251176470425}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserName为必填字段,Password为必填字段","time":1692326251220007059}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,UserID为必填字段","time":1692326251313861197}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326251516009703}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692326251608615434}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,ToUserID为必填字段,ActionType为必填字段","time":1692326251685565956}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,UserID为必填字段","time":1692326251765263124}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: ActionType为必填字段,Token为必填字段,VideoID为必填字段","time":1692326251860906653}
+2023/08/18 02:37:31 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326251923045627}
+2023/08/18 02:37:32 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs","time":1692326252000262628}
+2023/08/18 02:37:32 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: VideoID为必填字段,Token为必填字段","time":1692326252077376624}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserName为必填字段,Password为必填字段","time":1692326346055297280}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserName为必填字段,Password为必填字段","time":1692326346083711998}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326346129592228}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326346269499668}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"svc.PublishList err: token contains an invalid number of segments","time":1692326346333187440}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,ToUserID为必填字段,ActionType为必填字段","time":1692326346394868590}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326346489464095}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,VideoID为必填字段,ActionType为必填字段","time":1692326346581864523}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: UserID为必填字段,Token为必填字段","time":1692326346656652438}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs","time":1692326346774628522}
+2023/08/18 02:39:06 {"callers":["/home/source/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Token为必填字段,VideoID为必填字段","time":1692326346861524556}

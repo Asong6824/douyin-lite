@@ -21,8 +21,8 @@ type PublishListResp struct {
 }
 
 type FeedReq struct {
-	Token      string     `form:"token" binding:"required"`
-	LatestTime string  `form:"latest_time"`
+	Token      string     `form:"token"`
+	LatestTime string     `form:"latest_time"`
 }
 
 type FeedResp struct {

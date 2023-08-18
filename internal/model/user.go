@@ -17,12 +17,12 @@ func (u User) Register(db *gorm.DB) (uint32, error) {
 		return 0, err
 	}
 	// 执行查询获取最后插入的自增主键值
-	var id uint32
-	result := db.Raw("SELECT LAST_INSERT_ID() as id").Scan(&id)
+	var id []uint32
+	result := db.Table("users").Select("max(user_id)").Scan(&id)
 	if result.Error != nil {
 		return 0, result.Error
 	}
-	return id, nil
+	return id[0], nil
 }
 
 func (u User) Login(db *gorm.DB) (uint32, error) {
